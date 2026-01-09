@@ -1,0 +1,198 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Main Container ===== */
+.container {
+    background: #020617;
+    padding: 2rem;
+    border-radius: 18px;
+    width: 95%;
+    max-width: 480px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    color: #f9fafb;
+}
+
+/* ===== Heading ===== */
+.container > h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* ===== Search Section ===== */
+.search {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.search input {
+    flex: 1;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #020617;
+    color: #f9fafb;
+    outline: none;
+}
+
+.search input::placeholder {
+    color: #9ca3af;
+}
+
+.search input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.3);
+}
+
+/* ===== Buttons ===== */
+.primary-btn {
+    padding: 0.75rem 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    white-space: nowrap;
+}
+
+.primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(56,189,248,0.45);
+}
+
+.primary-btn:active {
+    transform: scale(0.96);
+}
+
+/* ===== Profile Box ===== */
+.profile-box {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 1.2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+/* ===== Top Section ===== */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Left side */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Avatar */
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #38bdf8;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name section */
+.self h1 {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.self h1:last-child {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* ===== About Section ===== */
+.about h2 {
+    font-size: 0.95rem;
+    color: #38bdf8;
+    margin-bottom: 0.3rem;
+}
+
+.about p {
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    line-height: 1.4;
+}
+
+/* ===== Status Grid ===== */
+.profile-box {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.top-section,
+.about {
+    grid-column: span 3;
+}
+
+.status-item {
+    background: rgba(255,255,255,0.05);
+    padding: 0.8rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.status-item h3 {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 0.2rem;
+}
+
+.status-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 420px) {
+    .search {
+        flex-direction: column;
+    }
+
+    .primary-btn {
+        width: 100%;
+    }
+
+    .top-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-section .primary-btn {
+        align-self: stretch;
+    }
+}
