@@ -26,5 +26,6 @@ _Add screenshot here (optional but recommended)_
 
 1. Clone the repository
    ```bash
-   git clone (https://github.com/mdkfx/Search-GitHub-Profile/tree/main)
+   git clone https://github.com/mdkfx/Search-GitHub-Profile/tree/main
+
 
